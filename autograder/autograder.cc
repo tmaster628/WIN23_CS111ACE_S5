@@ -77,9 +77,7 @@ void grade_submission (char *executable_path) {
         /* Silly "boilerplate" to extract the key from the map. Please ignore. */
         const char *test_word = key_value_pair.first.c_str();
         char test_word_copy[strlen(test_word) + 1];
-        strcpy(test_word_copy, test_word);
-        
-        // TODO: Implement the autograder!
+        strcpy(test_word_copy, test_word);       
 
     }
 }
@@ -90,6 +88,7 @@ int main (int argc, char *argv[]) {
     if (argc != 2) {
         cout << "ERROR: Incorrect number of arguments." << endl;
         cout << "Aborting..." << endl;
+        exit(0);
     }
 
     /* Run our autograde routine. */
